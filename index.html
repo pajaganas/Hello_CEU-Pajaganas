@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEU Makati</title>
+    <link rel="icon" href="C:\Users\RICOPAJAGANAS\Documents\Hello_CEU-Pajaganas\CEU-Logo.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FAE2EB;
+            color: #333;
+        }
+
+        header {
+            background-color: #494653;
+            padding: 10px 20px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header img {
+            height: 80px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #D35B91;
+        }
+
+        .hero {
+            position: relative;
+            background: linear-gradient(to bottom right, #FAE2EB, #E1BEE7);
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            color: #333;
+            padding: 20px;
+        }
+        
+
+
+        .hero-content {
+            text-align: left;
+            width: 50%;
+        }
+
+        .hero-content h1 {
+            font-size: 4em;
+            margin: 0;
+            color: #281E54;
+            text-shadow: 2px 2px #D35B91;
+        }
+
+        .hero-content p {
+            font-size: 1.5em;
+            color: #281E54;
+            margin-bottom: 20px;
+        }
+
+        .hero-content .button {
+            padding: 15px 30px;
+            background-color: #D35B91;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .hero-content .button:hover {
+            background-color: #a22882;
+            transform: scale(1.05);
+        }
+
+        .form-section {
+            background-color: #ffffff;
+            padding: 40px; 
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 60%; 
+            margin: 40px auto; 
+            border: 2px solid #D35B91;
+        }
+
+        .form-section input, .form-section button {
+            width: calc(100% - 20px); 
+            padding: 15px; 
+            margin: 10px 0; 
+            font-size: 1.2em; 
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+        .form-section input:focus {
+            border-color: #D35B91;
+        }
+
+        .form-section input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .form-section button {
+            background-color: #00297a;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            width: 100%; 
+            padding: 15px; 
+            font-size: 1.2em; 
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .form-section button:hover {
+            background-color: #001b4d;
+            transform: scale(1.05);
+        }
+
+        .form-section a {
+            color: #00297a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .vision-mission-section {
+            padding: 60px 20px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .vision-mission-card {
+            background-color: #FAE2EB;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 800px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .vision-mission-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .vision-mission-card h2 {
+            font-size: 2em;
+            color: #281E54;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px #D35B91;
+        }
+
+        .vision-mission-card p {
+            font-size: 1.1em;
+            color: #494653;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .campus-section {
+            padding: 20px;
+            background-color: #FAE2EB;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .campus-list {
+            width: 55%;
+        }
+
+        .form-container {
+            width: 40%;
+        }
+
+        .campus-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #281E54;
+            text-shadow: 1px 1px #D35B91;
+        }
+
+        .campus-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .campus-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .campus-item img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+
+        .campus-details {
+            max-width: 500px;
+        }
+
+        .campus-details h3 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #281E54;
+        }
+
+        .campus-details h4 {
+            margin: 5px 0;
+            color: #494653;
+            font-size: 1.1em;
+        }
+
+        .campus-details p {
+            margin: 0;
+            color: #555;
+            font-size: 1em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #281E54;
+            color: #fff;
+            position: relative;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        footer::after {
+            content: '';
+            display: block;
+            height: 5px;
+            background-color: #D35B91;
+            width: 50%;
+            margin: 10px auto 0 auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="C:\Users\RICOPAJAGANAS\Documents\Hello_CEU-Pajaganas\CEU-Logo.png" alt="CEU Logo">
+        <nav>
+            <a href="#">About Us</a>
+            <a href="#">Login</a>
+            <a href="#">Register</a>
+            <a href="#">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>CEU Makati</h1>
+            <p>Learn Different. Live Different. Congratulations to the Class of 2024!</p>
+            <a href="#" class="button">Read More</a>
+        </div>
+    </div>
+    
+
+    <div class="vision-mission-section">
+        <div class="vision-mission-card">
+            <h2>Vision</h2>
+            <p>CEU is the University of first choice — the leading higher education institution fostering excellence in the advancement of knowledge while engendering personal integrity and social responsibility.</p>
+        </div>
+
+        <div class="vision-mission-card">
+            <h2>Mission</h2>
+            <p>It is committed to:</p>
+            <p>Provide a rich and stimulating learning environment to prepare students to become productive, innovative, and value-driven professionals and entrepreneurs committed to nation building in the context of one world;</p>
+            <p>Enhance the development of higher education through exemplar academic programs and collaborative practices;</p>
+            <p>Contribute to the promotion of human well-being through high-quality research, and community service programs.</p>
+        </div>
+    </div>
+
+    <div class="campus-section">
+        <div class="campus-list">
+            <h2>Campus</h2>
+
+            <div class="campus-item">
+                <img src="C:\Users\RICOPAJAGANAS\Documents\Hello_CEU-Pajaganas\Mendiola.jpg" alt="Manila Campus">
+                <div class="campus-details">
+                    <h3>Manila</h3>
+                    <h4>CENTRO ESCOLAR UNIVERSITY</h4>
+                    <p>9 Mendiola Street, San Miguel, Manila<br>
+                    Telephone No. (02) 8735-6861 to 71</p>
+                </div>
+            </div>
+
+            <div class="campus-item">
+                <img src="C:\Users\RICOPAJAGANAS\Documents\Hello_CEU-Pajaganas\Gp.jpg" alt="Makati Campus">
+                <div class="campus-details">
+                    <h3>Makati</h3>
+                    <h4>CENTRO ESCOLAR UNIVERSITY</h4>
+                    <p>259 Sen. Gil Puyat Ave. Extension<br>
+                    Makati City<br>
+                    Telephone No. (02) 8893-2461</p>
+                </div>
+            </div>
+
+            <div class="campus-item">
+                <img src="C:\Users\RICOPAJAGANAS\Documents\Hello_CEU-Pajaganas\LV.jpeg" alt="Makati Campus">
+                <div class="campus-details">
+                    <h3>Makati</h3>
+                    <h4>CENTRO ESCOLAR UNIVERSITY</h4>
+                    <p>103 Esteban ST.<br>
+                    Makati City<br>
+                    Telephone No. (02) 893-24-64</p>
+                </div>
+            </div>
+
+            <div class="campus-item">
+                <img src="C:\Users\RICOPAJAGANAS\Documents\Hello_CEU-Pajaganas\Malolos.jpg" alt="Malolos Campus">
+                <div class="campus-details">
+                    <h3>Malolos</h3>
+                    <h4>CENTRO ESCOLAR UNIVERSITY</h4>
+                    <p>Km. 44 McArthur Highway<br>
+                    City of Malolos, Bulacan<br>
+                    Telephone No. (044) 791-9233 to 36</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <div class="form-section">
+                <h2>Contact Us</h2>
+                <form action="#" method="post">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <textarea name="message" placeholder="Message" rows="4" required></textarea>
+                    <input type="checkbox" name="subscribe" id="subscribe">
+                    <label for="subscribe">Subscribe to our newsletter</label><br>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 CEU Makati. All Rights Reserved.
+    </footer>
+</body>
+</html>
